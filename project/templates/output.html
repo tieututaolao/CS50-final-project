@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %} 
+    <div class="cell">
+        <form class="cell">
+            <table class="cell">
+                {% for i in range(9) %}
+                    <tr>
+                        {% for j in range(9) %}
+                            <td>
+                                {{ result[i][j] }}
+                            </td>    
+                        {% endfor %} 
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    </div>
+{% endblock content %}

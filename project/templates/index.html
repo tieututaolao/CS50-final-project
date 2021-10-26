@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+
+{% block content %} 
+    <div class="cell">
+        <form method="POST", action="/">
+            <table>
+                {% for i in range(9) %}
+                    <tr>
+                        {% for j in range(9) %}
+                            <td>
+                                <input name=cell-{{i}}{{j}} autocomplete="off">
+                            </td>    
+                        {% endfor %} 
+                    </tr>
+                {% endfor %}
+            </table>
+            <button class="btn btn-primary" type="submit">get result</button>
+        </form>
+    
+    </div>
+
+
+{% endblock content %}
